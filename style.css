@@ -1,0 +1,64 @@
+.container{
+    max-width: 44.375rem;
+    margin-top: 22rem;
+}
+
+.galeria{
+    min-height: 47rem;
+    padding-top: 11rem;
+    background: url(https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) center center/cover; /*img de fondo*/
+}
+
+.button{
+    text-decoration: none;
+    position: relative;
+    border:none;
+    font-size: 16px;
+    font-family: inherit;
+    color:#ffffff;
+    width: 12em;
+    height: 3am;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #363A91, #DD02B4, #09547D, #03a9f4 );
+    background-size: 400%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.button:hover{
+  animation: ani 8s linear infinite;
+  border: none;
+}
+
+@keyframes ani{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position:400%;
+    }
+}
+
+
+.button:before{
+    content: '';
+    position: absolute;
+    top:-5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #363A91, #DD02B4, #09547D, #03a9f4 );
+    background-size: 400%;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.button:hover::before{
+    filter: blur(20px);
+}
+
+.button:active{
+    background: linear-gradient(90deg, #363A91, #DD02B4, #09547D, #03a9f4 );
+}
